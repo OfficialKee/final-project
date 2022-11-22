@@ -1,3 +1,5 @@
+// WHAT DO WE WANT TO ACCOMPLISH????//
+
 //build pokemon game
 //two players... chose pokemon randomly or by name
 //turn based fighting game.
@@ -7,6 +9,15 @@
 //mew two is pokemon 150... important information!
 
 // -------------------------------------------------------------
+
+        //QuerySelectors//
+
+//-------------------------------------------------------------
+ let imgOne = document.querySelector('#pokemonOne');
+ let imgTwo = document.querySelector('#pokemonTwo');
+
+
+//-------------------------------------------------------------
 
         // GLOBAL OBJECTS, ARRAYS, VARIABLE//
 
@@ -27,11 +38,13 @@ let choosePokemon = async () => {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}/`);
     let data = await response.json();
     //pokemon array
-     //console.log(data)
+     console.log(data)
      //name of pokemon
      let pokemonName = data.name;
      //to loop through move list
     let pokemonMoves = data.moves[0].move.name;
+    let pokemonMoves2 = data.moves[1].move.name;
+    let pokemonMoves3 = data.moves[2].move.name;
     //this is HP
     
      let pokemonHP = data.stats[0].base_stat;
@@ -48,10 +61,19 @@ let choosePokemon = async () => {
     pokemonOne.atk = pokemonAtk
     pokemonOne.def = pokemonDef
     pokemonOne.type = pokemonType
-    pokemonOne.move = pokemonMoves
+    //created empty array, added 3 attacks to 'moves key array'
+    pokemonOne.move = []
+    pokemonOne.move.push(pokemonMoves)
+    pokemonOne.move.push(pokemonMoves2)
+    pokemonOne.move.push(pokemonMoves3)
+
+    //test 
+    console.log(data.sprites.front_shiny)
+    imgOne.src = data.sprites.front_shiny
+
 
     
-}
+};
 let choosePokemon2 = async () => {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber()}/`);
     let data = await response.json();
@@ -60,7 +82,10 @@ let choosePokemon2 = async () => {
      //name of pokemon
      let pokemonName = data.name;
      //to loop through move list
+
     let pokemonMoves = data.moves[0].move.name;
+    let pokemonMoves2 = data.moves[1].move.name;
+    let pokemonMoves3 = data.moves[2].move.name;
     //this is HP
     
      let pokemonHP = data.stats[0].base_stat;
@@ -77,10 +102,17 @@ let choosePokemon2 = async () => {
     pokemonTwo.atk = pokemonAtk
     pokemonTwo.def = pokemonDef
     pokemonTwo.type = pokemonType
-    pokemonTwo.move = pokemonMoves
+    //created empty array, added 3 attacks to 'moves key array'
+    pokemonTwo.move = []
+    pokemonTwo.move.push(pokemonMoves)
+    pokemonTwo.move.push(pokemonMoves2)
+    pokemonTwo.move.push(pokemonMoves3)
+
+
+    imgTwo.src = data.sprites.front_shiny
 
     
-}
+};
 function randomNumber(){
     let number = Math.floor(Math.random()*900);
 while(number<1){
@@ -93,9 +125,9 @@ while(number>900){
 }
     console.log(number);
     return number;
-}
+};
 
-
+//-------------------------------------------------------------------------
 
 // test functions
 choosePokemon();
@@ -110,8 +142,6 @@ console.log(pokemonTwo)
 //now to make the game based off recieved paramters
 
 
-function iChooseYou(){
 
-}
 
 
