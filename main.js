@@ -66,10 +66,8 @@ let choosePokemon = async () => {
     pokemonOne.move.push(pokemonMoves)
     pokemonOne.move.push(pokemonMoves2)
     pokemonOne.move.push(pokemonMoves3)
-
-    //test 
-    console.log(data.sprites.front_shiny)
-    imgOne.src = data.sprites.front_shiny
+    //added images
+     imgOne.src = data.sprites.front_shiny
 
 
     
@@ -107,8 +105,7 @@ let choosePokemon2 = async () => {
     pokemonTwo.move.push(pokemonMoves)
     pokemonTwo.move.push(pokemonMoves2)
     pokemonTwo.move.push(pokemonMoves3)
-
-
+    //added images 
     imgTwo.src = data.sprites.front_shiny
 
     
@@ -126,6 +123,8 @@ while(number>900){
     console.log(number);
     return number;
 };
+
+
 
 //-------------------------------------------------------------------------
 
