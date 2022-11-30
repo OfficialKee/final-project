@@ -44,8 +44,9 @@ h3{
     width: 70px;
     height: 70px;
     background-image: url(https://www.netclipart.com/pp/m/71-716602_freeuse-download-pokemon-ball-png-images-pokemon-ball.png);
-    background-size: 75px 75px;
-    border: none;
+    background-size: 79px 80px;
+    background-position: -5px -3.3px;
+    /* border: none; */
     
     
 }
