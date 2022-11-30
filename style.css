@@ -1,15 +1,70 @@
-h1{
-    display: flex;
-    justify-content: center;
+html{
+    height: 100%;
 }
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    background-image: url('https://i.pinimg.com/originals/47/b9/14/47b91495e80426f8b2d419a23c80da59.png') ;
+body{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    min-height: 100%;
+   
+    
+} 
+header{
+    text-align: center;
+}
+#background{
+    background-image: url(https://th.bing.com/th/id/R.90cc67b7fa0b2430d83e931ed8ab3b64?rik=h1WqgHzs%2bhUOIw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fqc0aDfL.jpg&ehk=hc7%2f7%2fcTGQwazGUzIWtJ%2fHdQ6%2fI%2foATEFWJjBU7p3nw%3d&risl=&pid=ImgRaw&r=0);
+    color: rgb(60, 102, 179);
+ 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    text-align: center;
     
 }
+h3{
+    text-align: center;
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
+    
+    
+    
+    
+    
 
-
-
+}
+.choose{
+    background-color: blue;
+    border-radius: 360px;
+    width: 70px;
+    height: 70px;
+    background-image: url(https://www.netclipart.com/pp/m/71-716602_freeuse-download-pokemon-ball-png-images-pokemon-ball.png);
+    background-size: 75px 75px;
+    border: none;
+    
+    
+}
+#startButton , a{
+    background-color: rgb(60, 102, 179);
+    color: white;
+    border-radius: 360px;
+    height: 50px;
+    width: 50px;
+}
+#instruction{
+    width: 70px;
+    height: 70px;
+    border-radius: 360px;
+    background-color: rgb(60, 102, 179);
+    color: yellow;
+}
+div{
+    text-align: center;
+    margin: 10px;
+    
+}
