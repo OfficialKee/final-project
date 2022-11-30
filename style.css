@@ -51,10 +51,11 @@ h3{
 }
 #startButton , a{
     background-color: rgb(60, 102, 179);
-    color: white;
+    color: yellow;
     border-radius: 360px;
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 70px;
+    text-decoration: none;
 }
 #instruction{
     width: 70px;
