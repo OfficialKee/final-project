@@ -10,7 +10,8 @@ let squirtle = document.querySelector('#squirtle');
 let pikachu = document.querySelector('#pikachu');
 let pidgey = document.querySelector('#pidgey');
 let geodude = document.querySelector('#geodude');
-let pickPlayer = document.querySelector('#pickPlayer')
+let pickPlayer = document.querySelector('#pickPlayer');
+let rulesButton = document.querySelector('#instruction');
  let playerOne = [];
  let playerTwo = [];
 
@@ -19,7 +20,7 @@ let pickPlayer = document.querySelector('#pickPlayer')
 
 Six event Listeners that  upon click will fetch the pokemon ans the attributes from the Api,
 Selected attributes will then be used to create a pokemon object for each pokemon 
-The Pokemon Objects will then be added to each player array, construction an 'array of objects'
+The Pokemon Objects will then be added to each player array, constructing an 'array of objects' for each player.
 
 
 */
@@ -319,6 +320,11 @@ geodude.addEventListener('click',async () => {
     console.log(playerOne);
     console.log(playerTwo)
 });
+
+rulesButton.addEventListener('click',()=>{
+  alert('In order to begin the game Player 1 must choose a pokeball. Player 2 will then choose their pokeball. This sequence will continue until there are no more pokeballs remaining.Once all the pokeballs are gone click the Start Game button , and you will enter the battlefield. ')
+});
+
 
 
 
