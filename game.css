@@ -29,16 +29,16 @@ main{
 }
 
 #trainerOneTeam{
-  width: 15vh;
-  height: 10vh;
+  width: 10vh;
+  height: 8vh;
   margin-bottom: 6vh;
   margin-left: 15vh;
 
 }
 #trainerTwoTeam{
-  width: 15vh;
-  height: 10vh;
-  margin-bottom: 6vh;
+  width: 8vh;
+  height: 6vh;
+  margin-bottom: 10vh;
   margin-right: 15vh;
 }
 /* After this point copieddddd pastedddd ....tried to use  SCSS lol but egh tooo much work. */

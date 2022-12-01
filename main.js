@@ -25,9 +25,8 @@ The Pokemon Objects will then be added to each player array, constructing an 'ar
 
 */
 
-
-
-bulbasaur.addEventListener('click',async () => {
+if(bulbasaur){
+  bulbasaur.addEventListener('click',async () => {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/bulbasaur/`);
   let data = await response.json();
   //console.log(data)
@@ -76,9 +75,10 @@ bulbasaur.addEventListener('click',async () => {
    
 });
 
+}
 
-
-charmander.addEventListener('click',async () => {
+if(charmander){
+  charmander.addEventListener('click',async () => {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/charmander/`);
   let data = await response.json();
   //console.log(data)
@@ -126,8 +126,10 @@ charmander.addEventListener('click',async () => {
     console.log(playerTwo)
 });
 
+}
 
-squirtle.addEventListener('click',async () => {
+if(squirtle){
+  squirtle.addEventListener('click',async () => {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/squirtle/`);
   let data = await response.json();
   //console.log(data)
@@ -174,8 +176,10 @@ squirtle.addEventListener('click',async () => {
     console.log(playerTwo)
 });
 
+}
 
-pikachu.addEventListener('click',async () => {
+if(pikachu){
+  pikachu.addEventListener('click',async () => {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/pikachu/`);
   let data = await response.json();
   //console.log(data)
@@ -223,8 +227,10 @@ pikachu.addEventListener('click',async () => {
     console.log(playerTwo)
 });
 
+}
 
-pidgey.addEventListener('click',async () => {
+if(pidgey){
+  pidgey.addEventListener('click',async () => {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/pidgey/`);
   let data = await response.json();
   //console.log(data)
@@ -273,8 +279,10 @@ if(playerOne.length === playerTwo.length && playerOne.length < 3){
     console.log(playerTwo)
 });
 
+}
 
-geodude.addEventListener('click',async () => {
+if(geodude){
+  geodude.addEventListener('click',async () => {
     let response = await fetch(`https://pokeapi.co/api/v2/pokemon/geodude/`);
   let data = await response.json();
   //console.log(data)
@@ -321,9 +329,25 @@ geodude.addEventListener('click',async () => {
     console.log(playerTwo)
 });
 
-rulesButton.addEventListener('click',()=>{
-  alert('In order to begin the game Player 1 must choose a pokeball. Player 2 will then choose their pokeball. This sequence will continue until there are no more pokeballs remaining.Once all the pokeballs are gone click the Start Game button , and you will enter the battlefield. ')
-});
+}
+
+if(rulesButton){
+
+  rulesButton.addEventListener('click',()=>{
+    alert('In order to begin the game Player 1 must choose a pokeball. Player 2 will then choose their pokeball. This sequence will continue until there are no more pokeballs remaining.Once all the pokeballs are gone click the Start Game button , and you will enter the battlefield. ')
+  });
+  
+}
+
+
+
+/*.............................................Page TWo Main JS!!!!! ............................................*/
+
+/*Query Selecting elements from game.html
+*/ 
+let pokemonOnField = document.querySelector('#trainerOneTeam');
+let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
+
 
 
 
