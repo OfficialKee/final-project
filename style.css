@@ -23,6 +23,10 @@ header{
 h1{
     text-align: center;
     
+    
+}
+#pokemonLogo{
+    width: 75vh;
 }
 h3{
     text-align: center;
@@ -41,11 +45,12 @@ h3{
 .choose{
     background-color: blue;
     border-radius: 360px;
-    width: 70px;
-    height: 70px;
+    width: 11vh;
+    height: 11vh;
     background-image: url(https://www.netclipart.com/pp/m/71-716602_freeuse-download-pokemon-ball-png-images-pokemon-ball.png);
-    background-size: 79px 80px;
-    background-position: -5px -3.3px;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
     /* border: none; */
     
     
@@ -54,16 +59,18 @@ h3{
     background-color: rgb(60, 102, 179);
     color: yellow;
     border-radius: 360px;
-    height: 70px;
-    width: 70px;
+    height: 11vh;
+    width: 11vh;
     text-decoration: none;
+    font-size: 2vh;
 }
 #instruction{
-    width: 70px;
-    height: 70px;
+    width: 11vh;
+    height: 11vh;
     border-radius: 360px;
     background-color: rgb(60, 102, 179);
     color: yellow;
+    font-size: 2vh;
 }
 div{
     text-align: center;
