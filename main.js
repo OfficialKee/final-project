@@ -423,7 +423,6 @@ let atk5 = false;
 let atk6 = false;
 //creating an empty array becuase i might need it
 let battleArray = []
-let battleReady = false;
 let player1 = 3
 let player2 = 3
 //stored array in my local storage earlier so now im retrieving that information so that it can be applied to game
@@ -467,6 +466,7 @@ if(pokemonOne){
     pokemonTwo.disabled=true;
     pokemonThree.disabled = true;
     p1 = true;
+    battleArray=[]
     battleArray.push(getPlayerOne[0])
     console.log(battleArray)
 
@@ -484,6 +484,7 @@ if(pokemonTwo){
     pokemonOne.disabled = true;
     pokemonThree.disabled = true;
     p2 = true;
+    battleArray=[]
     battleArray.push(getPlayerOne[1])
   })
 }
@@ -498,6 +499,7 @@ if(pokemonThree){
     pokemonOne.disabled = true;
     pokemonTwo.disabled = true;
     p3 = true;
+    battleArray=[]
     battleArray.push(getPlayerOne[2]);
   })
 }
@@ -549,6 +551,9 @@ if(pokemonSix){
 if(atkOne){
   atkOne.addEventListener('click',()=>{
     atk1=true;
+    atkTwo.disabled = false;
+    atkThree.disabled = false;
+    atkOne.disabled = true;
 
   })
 
@@ -556,53 +561,335 @@ if(atkOne){
 if(atkTwo){
   atkTwo.addEventListener('click',()=>{
     atk2 = true;
+    atkTwo.disabled = true
+    atkThree.disabled = false;
+    atkOne.disabled = false;
 
   })
 
 }
+
 if(atkThree){
   atkThree.addEventListener('click',()=>{
     atk3 = true;
-
+    atkThree.disabled = true
+    atkOne.disabled = false
+    atkTwo.disabled = false
   })
 
 }
 if(atkFour){
   atkFour.addEventListener('click',()=>{
+    atkFour.disabled = true;
+    atkFive.disabled = false;
+    atkSix.disabled = false;
     atk4 = true;
     if(p1 === true || p2 === true || p3 === true){
       console.log(battleArray)
-      if(battleArray[0].attack - battleArray[1].defense < 0){
+      if(battleArray[0].attack - battleArray[1].defense > 0){
           pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
           console.log('pokemon 2 dead')
           if(p4 === true){
+            pokemonFive.disabled = false;
+            pokemonSix.disabled = false;
             pokemonFour.style.display = 'none';
             alert('you got beat down player 2 try again')
+            p4 = false;
             player2 = player2 - 1;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+
+            }
+          }if(p5 === true){
+            pokemonFour.disabled = false;
+            pokemonSix.disabled = false;
+            pokemonFive.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            p5 = false;
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
             }
 
+          }if(p6 === true){
+            pokemonFour.disabled = false;
+            pokemonFive.disabled = false;
+            pokemonSix.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            p6 = false;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            }
 
           }
+      }else if(battleArray[0].attack - battleArray[1].defense < 0){
+        pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        console.log('pokemon one dead');
+        if(p1 === true){
+          pokemonTwo.disabled = false;
+          pokemonThree.disabled = false;
+          pokemonOne.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player1 - 1;
+          p1 = false;
+          if(player1 === 0){
+            alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+        }if(p2 === true){
+          pokemonOne.disabled = false;
+          pokemonThree.disabled = false;
+          pokemonTwo.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player1 - 1;
+          p2 = false;
+          if(player1 === 0){
+            alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+
+        }if(p3 === true){
+          pokemonOne.disabled = false;
+          pokemonTwo.disabled = false;
+          pokemonThree.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player1 - 1;
+          p3 = false;
+          if(player1 === 0){
+            alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+
+        }
       }
     }
 
   })
 
 }
+
+
 if(atkFive){
+  
   atkFive.addEventListener('click',()=>{
+    atkFive.disabled = true;
+    atkFour.disabled = false;
+    atkSix.disabled = false;
     atk5 = true;
+    if(p1 === true || p2 === true || p3 === true){
+      console.log(battleArray)
+      if(battleArray[0].attack - battleArray[1].defense < 0){
+          pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          console.log('pokemon 2 dead')
+          if(p4 === true){
+            pokemonFive.disabled = false;
+            pokemonSix.disabled = false;
+            pokemonFour.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            p4 = false;
+            p1 = false;
+            p2 = false;
+            p3 = false;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            }
+          }if(p5 === true){
+            pokemonFour.disabled = false;
+            pokemonSix.disabled = false;
+            pokemonFive.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            p5 = false;
+            p1 = false;
+            p2 = false;
+            p3 = false;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            }
+
+          }if(p6 === true){
+            pokemonFour.disabled = false;
+            pokemonFive.disabled = false;
+            pokemonSix.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            p6 = false;
+            p1 = false;
+            p2 = false;
+            p3 = false;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            }
+
+          }
+      }else if(battleArray[0].attack - battleArray[1].defense > 0){
+        pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        console.log('pokemon one dead');
+        if(p1 === true){
+          pokemonTwo.disabled = false;
+          pokemonThree.disabled = false;
+          pokemonOne.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player1 - 1;
+          p1 = false;
+          p4 =false;
+          p5 =false;
+          p6 =false;
+          if(player1 === 0){
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+        }if(p2 === true){
+          pokemonOne.disabled = false;
+          pokemonThree.disabled = false;
+          pokemonTwo.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player1 - 1;
+          p2 = false;
+          p4 = false;
+          p5 = false;
+          p6 = false;
+          if(player1 === 0){
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+
+        }if(p3 === true){
+          pokemonOne.disabled = false;
+          pokemonTwo.disabled = false;
+          pokemonThree.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player1 - 1;
+          p3 = false;
+          p4 = false;
+          p5 = false;
+          p6 = false;
+          if(player1 === 0){
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+
+        }
+      }
+    }
+
 
   })
 
 }
+
+
+
 if(atkSix){
   atkSix.addEventListener('click',()=>{
+    atk6.disabled = true;
+    atk5.disabled = false;
+    atk4.disabled = false;
     atk6 = true;
+    if(p1 === true || p2 === true || p3 === true){
+      console.log(battleArray)
+      if(battleArray[0].attack - battleArray[1].defense < 0){
+          pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          console.log('pokemon 2 dead')
+          if(p4 === true){
+           
+            
+            pokemonFive.disabled = false;
+            pokemonSix.disabled = false;
+            pokemonFour.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            p4 = false;
+            p1 = false;
+            p2 = false;
+            p3 = false;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            }
+          }if(p5 === true){
+            
+            pokemonFour.disabled = false;
+            pokemonSix.disabled = false;
+            pokemonFive.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            p5 = false;
+            p1 = false;
+            p2 = false;
+            p3 = false;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            }
+
+          }if(p6 === true){
+           
+           
+            pokemonFour.disabled = false;
+            pokemonFive.disabled = false;
+            pokemonSix.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            p6 = false;
+            p1 = false;
+            p2 = false;
+            p3 = false;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            }
+
+          }
+      }else if(battleArray[0].attack - battleArray[1].defense > 0){
+        pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        console.log('pokemon one dead');
+        if(p1 === true){
+          pokemonTwo.disabled = false;
+          pokemonThree.disabled = false;
+          pokemonOne.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player1 - 1;
+          p1 = false;
+          p4 = false;
+          p5 = false;
+          p6 = false;
+          if(player1 === 0){
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+        }if(p2 === true){
+          pokemonOne.disabled = false;
+          pokemonThree.disabled = false;
+          pokemonTwo.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player1 - 1;
+          p2 = false;
+          p4 =false;
+          p5 =false;
+          p6 =false;
+
+          if(player1 === 0){
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+
+        }if(p3 === true){
+          pokemonOne.disabled = false;
+          pokemonTwo.disabled = false;
+          pokemonThree.style.display = 'none';
+          alert('you got beat down player 1 try again')
+          player1 = player - 1;
+          p3 = false;
+          p4 = false;
+          p5 = false;
+          p6 = false;
+          
+          if(player1 === 0){
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+          }
+
+        }
+
+
+      }
+    }
+  
+
 
   })
-
+  
 }
 
+ 
