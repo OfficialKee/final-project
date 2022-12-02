@@ -62,7 +62,9 @@ if(bulbasaur){
     pokemon.moves = moves;
     pokemon.attack = atk;
     pokemon.defense = def;
-    pokemon.img = img
+    pokemon.img = img;
+    pokemon.front = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif';
+    pokemon.back = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/1.gif'
 
     console.log(pokemon)
     if(playerOne.length === playerTwo.length && playerOne.length < 3){
@@ -115,7 +117,9 @@ if(charmander){
     pokemon.moves = moves;
     pokemon.attack = atk;
     pokemon.defense = def;
-    pokemon.img = img
+    pokemon.img = img;
+    pokemon.front = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/4.gif';
+    pokemon.back = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/4.gif';
 
     console.log(pokemon)
     if(playerOne.length === playerTwo.length && playerOne.length < 3){
@@ -168,7 +172,9 @@ if(squirtle){
     pokemon.moves = moves;
     pokemon.attack = atk;
     pokemon.defense = def;
-    pokemon.img = img
+    pokemon.img = img;
+    pokemon.front = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/7.gif';
+    pokemon.back = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/7.gif'
 
     console.log(pokemon)
     if(playerOne.length === playerTwo.length && playerOne.length < 3){
@@ -220,7 +226,9 @@ if(pikachu){
     pokemon.moves = moves;
     pokemon.attack = atk;
     pokemon.defense = def;
-    pokemon.img = img
+    pokemon.img = img;
+    pokemon.front = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/female/25.gif';
+    pokemon.back = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/25.gif';
 
     console.log(pokemon)
     if(playerOne.length === playerTwo.length && playerOne.length < 3){
@@ -274,7 +282,9 @@ pokemon.name = name;
 pokemon.moves = moves;
 pokemon.attack = atk;
 pokemon.defense = def;
-pokemon.img = img
+pokemon.img = img;
+pokemon.front = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/16.gif';
+pokemon.back = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/16.gif';
 
 console.log(pokemon)
 if(playerOne.length === playerTwo.length && playerOne.length < 3){
@@ -327,7 +337,9 @@ if(geodude){
     pokemon.moves = moves;
     pokemon.attack = atk;
     pokemon.defense = def;
-    pokemon.img = img
+    pokemon.img = img;
+    pokemon.front = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/shiny/74.gif';
+    pokemon.back = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/back/shiny/74.gif';
 
     console.log(pokemon)
     if(playerOne.length === playerTwo.length && playerOne.length < 3){
@@ -351,8 +363,7 @@ if(rulesButton){
   });
   
 }
-// let playerOne_serialized
-// let playerTwo_serialized
+
 if(startButton){
   startButton.addEventListener('click',()=>{
     localStorage.setItem('playerOne',playerOne_serialized);
@@ -370,19 +381,35 @@ if(startButton){
 
 /*Query Selecting elements from game.html
 */ 
+// pokemon shown on field
 let pokemonOnField = document.querySelector('#trainerOneTeam');
 let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
+//game start button
 let fightButton = document.querySelector('#fightButton');
-let addButtonsHere = document.querySelector('.alignButtonsOne');
-let addButtonsHereTwo = document.querySelector('.alignButtonsTwo');
-let addPokemon = document.querySelectorAll('.pokemon')
-let addPokemonTwo = document.querySelectorAll('.pokemonTwo')
+//pokemon buttons array
+let addPokemon = document.querySelectorAll('.pokemon');
+let addPokemonTwo = document.querySelectorAll('.pokemonTwo');
+// pokemon attacks
+let atkOne = document.querySelector('#atkOne');
+let atkTwo = document.querySelector('#atkTwo');
+let atkThree = document.querySelector('#atkThree');
+let atkOne2 = document.querySelector('#atkOne2');
+let atkTwo2 = document.querySelector('#atkTwo2');
+let atkThree2 = document.querySelector('#atkThree2');
+// pokemon buttons individual
+let pokemonOne =document.querySelector('#pokemonOneOne');
+let pokemonTwo =document.querySelector('#pokemonOneTwo')
+let pokemonThree =document.querySelector('#pokemonOneThree')
+let pokemonOne2 =document.querySelector('#pokemonTwoOne')
+let pokemonTwo2 =document.querySelector('#pokemonTwoTwo')
+let pokemonThree2 =document.querySelector('#pokemonTwoThree')
+//creating boolean to checl if pokemon is dead
 
 //stored array in my local storage earlier so now im retrieving that information so that it can be applied to game
 let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
     let getPlayerTwo = JSON.parse(localStorage.getItem('playerTwo'))
     console.log(getPlayerOne);
-    console.log(getPlayerTwo);
+    //  console.log(getPlayerTwo);
 
 
 
@@ -407,4 +434,59 @@ if(fightButton){
       }
 
 
+///assigning attack to buttons as pokemon are chosen
+
+if(pokemonOne){
+  pokemonOne.addEventListener('click',()=>{
+    console.log(getPlayerOne[0].moves);
+    atkOne.innerHTML = getPlayerOne[0].moves[0]
+    atkTwo.innerHTML = getPlayerOne[0].moves[1]
+    atkThree.innerHTML = getPlayerOne[0].moves[2]
+  })
+}
+
+if(pokemonTwo){
+  pokemonTwo.addEventListener('click',()=>{
+    console.log(getPlayerOne[1].moves);
+    atkOne.innerHTML = getPlayerOne[1].moves[0]
+    atkTwo.innerHTML = getPlayerOne[1].moves[1]
+    atkThree.innerHTML = getPlayerOne[1].moves[2]
+  })
+}
+
+if(pokemonThree){
+  pokemonThree.addEventListener('click',()=>{
+    console.log(getPlayerOne[2].moves);
+    atkOne.innerHTML = getPlayerOne[2].moves[0]
+    atkTwo.innerHTML = getPlayerOne[2].moves[1]
+    atkThree.innerHTML = getPlayerOne[2].moves[2]
+  })
+}
+
+if(pokemonOne2){
+  pokemonOne2.addEventListener('click',()=>{
+    console.log(getPlayerTwo[0].moves);
+    atkOne2.innerHTML = getPlayerTwo[0].moves[0]
+    atkTwo2.innerHTML = getPlayerTwo[0].moves[1]
+    atkThree2.innerHTML = getPlayerTwo[0].moves[2]
+  })
+}
+
+if(pokemonTwo2){
+  pokemonTwo2.addEventListener('click',()=>{
+    console.log(getPlayerTwo[1].moves);
+    atkOne2.innerHTML = getPlayerTwo[1].moves[0]
+    atkTwo2.innerHTML = getPlayerTwo[1].moves[1]
+    atkThree2.innerHTML = getPlayerTwo[1].moves[2]
+  })
+}
+
+if(pokemonThree2){
+  pokemonThree2.addEventListener('click',()=>{
+    console.log(getPlayerTwo[2].moves);
+    atkOne2.innerHTML = getPlayerTwo[2].moves[0]
+    atkTwo2.innerHTML = getPlayerTwo[2].moves[1]
+    atkThree2.innerHTML = getPlayerTwo[2].moves[2]
+  })
+}
 
