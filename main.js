@@ -12,8 +12,11 @@ let pidgey = document.querySelector('#pidgey');
 let geodude = document.querySelector('#geodude');
 let pickPlayer = document.querySelector('#pickPlayer');
 let rulesButton = document.querySelector('#instruction');
+let startButton = document.querySelector('#startButton');
  let playerOne = [];
  let playerTwo = [];
+ let playerOne_serialized = JSON.stringify(playerOne);
+let playerTwo_serialized = JSON.stringify(playerTwo);
 
 
 /*
@@ -121,6 +124,8 @@ if(charmander){
          playerTwo.push(pokemon);
         
     }
+    playerOne_serialized = JSON.stringify(playerOne);
+    playerTwo_serialized = JSON.stringify(playerTwo);
 
     console.log(playerOne);
     console.log(playerTwo)
@@ -172,6 +177,8 @@ if(squirtle){
          playerTwo.push(pokemon);
         
     }
+      playerOne_serialized = JSON.stringify(playerOne);
+      playerTwo_serialized = JSON.stringify(playerTwo);
     console.log(playerOne);
     console.log(playerTwo)
 });
@@ -222,6 +229,8 @@ if(pikachu){
          playerTwo.push(pokemon);
         
     }
+    playerOne_serialized = JSON.stringify(playerOne);
+    playerTwo_serialized = JSON.stringify(playerTwo);
 
     console.log(playerOne);
     console.log(playerTwo)
@@ -274,6 +283,8 @@ if(playerOne.length === playerTwo.length && playerOne.length < 3){
          playerTwo.push(pokemon);
         
     }
+  playerOne_serialized = JSON.stringify(playerOne);
+  playerTwo_serialized = JSON.stringify(playerTwo);
 
     console.log(playerOne);
     console.log(playerTwo)
@@ -325,6 +336,8 @@ if(geodude){
          playerTwo.push(pokemon);
         
     }
+    playerOne_serialized = JSON.stringify(playerOne);
+    playerTwo_serialized = JSON.stringify(playerTwo);
     console.log(playerOne);
     console.log(playerTwo)
 });
@@ -338,7 +351,19 @@ if(rulesButton){
   });
   
 }
+// let playerOne_serialized
+// let playerTwo_serialized
+if(startButton){
+  startButton.addEventListener('click',()=>{
+    localStorage.setItem('playerOne',playerOne_serialized);
+    localStorage.setItem('playerTwo',playerTwo_serialized);
+    console.log(playerOne_serialized && playerTwo_serialized);
+  
 
+
+
+  })
+}
 
 
 /*.............................................Page TWo Main JS!!!!! ............................................*/
@@ -347,6 +372,17 @@ if(rulesButton){
 */ 
 let pokemonOnField = document.querySelector('#trainerOneTeam');
 let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
+let fightButton = document.querySelector('#fightButton');
+
+
+if(fightButton){
+  fightButton>addEventListener('click',()=>{
+    let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
+    let getPlayerTwo = JSON.parse(localStorage.getItem('playerTwo'))
+    console.log(getPlayerOne);
+    console.log(getPlayerTwo);
+  })
+}
 
 
 

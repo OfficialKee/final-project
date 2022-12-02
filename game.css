@@ -8,13 +8,32 @@ body{
 header{
     color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+   margin: auto;
 }
 #pokemonLogo{
   width: 75vh;
 }
+h1{
+  margin: auto;
+ 
+}
+h5{
+  color: white;
+}
+#fightButton{
+  margin: auto;
+  
+}
 main{
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+}
+.pokemonButtons{
+  display: grid;
+  justify-content: center;
 }
 #backgroundImage{
     background-image: url(https://assets.pokemon.com/assets/cms2/img/watch-pokemon-tv/seasons/season15/season15_ep42_ss01.jpg);
