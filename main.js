@@ -372,7 +372,9 @@ if(startButton){
 */ 
 let pokemonOnField = document.querySelector('#trainerOneTeam');
 let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
-let fightButton = document.querySelector('#fightButton')
+let fightButton = document.querySelector('#fightButton');
+let addButtonsHere = document.querySelector('.alignButtonsOne');
+let addButtonsHereTwo = document.querySelector('.alignButtonsTwo');
 
 
 let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
@@ -384,9 +386,29 @@ let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
 
 
 if(fightButton){
-      fightButton.onclick = ()=>{
+      fightButton.addEventListener('click',()=>{
         console.log('hi')
-      }
-    }
+
+        for (let i = 0; i < getPlayerOne.length; i++) {
+          let button = document.createElement('button');
+          button.classList.add('pokemon')
+          button.style.backgroundImage = `url('${getPlayerOne[i].img}')`
+          button.src = `${getPlayerOne[i].img}`
+          addButtonsHere.appendChild(button)
+          
+        }
+        for (let i = 0; i < getPlayerTwo.length; i++) {
+          let button = document.createElement('button');
+          button.classList.add('pokemon')
+          button.style.backgroundImage = `url('${getPlayerTwo[i].img}')`
+          button.src = `${getPlayerOne[i].img}`
+          addButtonsHereTwo.appendChild(button)
+          
+        }
+        fightButton.disabled = true
+      })
+}
 
 
+
+console.log(getPlayerOne[1].img)
