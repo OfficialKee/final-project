@@ -384,6 +384,9 @@ if(startButton){
 // pokemon shown on field
 let pokemonOnField = document.querySelector('#trainerOneTeam');
 let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
+// trainer health bars
+let healthBarOne = document.querySelector('#healthOne');
+let healthBarTwo = document.querySelector('#HwalthTwo');
 //game start button
 let fightButton = document.querySelector('#fightButton');
 //pokemon buttons array
@@ -393,17 +396,31 @@ let addPokemonTwo = document.querySelectorAll('.pokemonTwo');
 let atkOne = document.querySelector('#atkOne');
 let atkTwo = document.querySelector('#atkTwo');
 let atkThree = document.querySelector('#atkThree');
-let atkOne2 = document.querySelector('#atkOne2');
-let atkTwo2 = document.querySelector('#atkTwo2');
-let atkThree2 = document.querySelector('#atkThree2');
+let atkFour = document.querySelector('#atkOne2');
+let atkFive = document.querySelector('#atkTwo2');
+let atkSix = document.querySelector('#atkThree2');
 // pokemon buttons individual
 let pokemonOne =document.querySelector('#pokemonOneOne');
-let pokemonTwo =document.querySelector('#pokemonOneTwo')
-let pokemonThree =document.querySelector('#pokemonOneThree')
-let pokemonOne2 =document.querySelector('#pokemonTwoOne')
-let pokemonTwo2 =document.querySelector('#pokemonTwoTwo')
-let pokemonThree2 =document.querySelector('#pokemonTwoThree')
-//creating boolean to checl if pokemon is dead
+let pokemonTwo =document.querySelector('#pokemonOneTwo');
+let pokemonThree =document.querySelector('#pokemonOneThree');
+let pokemonFour =document.querySelector('#pokemonTwoOne');
+let pokemonFive =document.querySelector('#pokemonTwoTwo');
+let pokemonSix =document.querySelector('#pokemonTwoThree');
+//creating booleans to facilitate fight sequence...... false booleans for pokemon selection will be set to true once selected
+let pokemonChosen = false;
+let p1 = false;
+let p2 = false;
+let p3 = false;
+let p4 = false;
+let p5 = false;
+let p6 = false;
+//booleans for attack choices
+let atk1 = false;
+let atk2 = false;
+let atk3 = false;
+let atk4 = false;
+let atk5 = false;
+let atk6 = false;
 
 //stored array in my local storage earlier so now im retrieving that information so that it can be applied to game
 let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
@@ -443,7 +460,11 @@ if(pokemonOne){
     atkTwo.innerHTML = getPlayerOne[0].moves[1]
     atkThree.innerHTML = getPlayerOne[0].moves[2]
     pokemonOnField.src = getPlayerOne[0].back
+    pokemonTwo.disabled=true;
+    pokemonThree.disabled = true;
+    p1 = true;
   })
+  
 }
 
 if(pokemonTwo){
@@ -453,6 +474,9 @@ if(pokemonTwo){
     atkTwo.innerHTML = getPlayerOne[1].moves[1]
     atkThree.innerHTML = getPlayerOne[1].moves[2]
     pokemonOnField.src = getPlayerOne[1].back
+    pokemonOne.disabled = true;
+    pokemonThree.disabled = true;
+    p2 = true;
   })
 }
 
@@ -463,36 +487,49 @@ if(pokemonThree){
     atkTwo.innerHTML = getPlayerOne[2].moves[1]
     atkThree.innerHTML = getPlayerOne[2].moves[2]
     pokemonOnField.src = getPlayerOne[2].back
+    pokemonOne.disabled = true;
+    pokemonTwo.disabled = true;
+    p3 = true;
   })
 }
 
-if(pokemonOne2){
+if(pokemonFour){
   pokemonOne2.addEventListener('click',()=>{
     console.log(getPlayerTwo[0].moves);
-    atkOne2.innerHTML = getPlayerTwo[0].moves[0]
-    atkTwo2.innerHTML = getPlayerTwo[0].moves[1]
-    atkThree2.innerHTML = getPlayerTwo[0].moves[2]
+    atkFour.innerHTML = getPlayerTwo[0].moves[0]
+    atkFive.innerHTML = getPlayerTwo[0].moves[1]
+    atkSix.innerHTML = getPlayerTwo[0].moves[2]
     pokemonOnField2.src = getPlayerTwo[0].front
+    pokemonFive.disabled=true;
+    pokemonSix.disabled = true;
+    p4 = true;
+
   })
 }
 
-if(pokemonTwo2){
+if(pokemonFive){
   pokemonTwo2.addEventListener('click',()=>{
     console.log(getPlayerTwo[1].moves);
-    atkOne2.innerHTML = getPlayerTwo[1].moves[0]
-    atkTwo2.innerHTML = getPlayerTwo[1].moves[1]
-    atkThree2.innerHTML = getPlayerTwo[1].moves[2]
+    atkFour.innerHTML = getPlayerTwo[1].moves[0]
+    atkFive.innerHTML = getPlayerTwo[1].moves[1]
+    atkSix.innerHTML = getPlayerTwo[1].moves[2]
     pokemonOnField2.src = getPlayerTwo[1].front
+    pokemonFour.disabled = true;
+    pokemonSix.disabled = true;
+    p5= true;
   })
 }
 
-if(pokemonThree2){
+if(pokemonSix){
   pokemonThree2.addEventListener('click',()=>{
     console.log(getPlayerTwo[2].moves);
-    atkOne2.innerHTML = getPlayerTwo[2].moves[0]
-    atkTwo2.innerHTML = getPlayerTwo[2].moves[1]
-    atkThree2.innerHTML = getPlayerTwo[2].moves[2]
+    atkFour.innerHTML = getPlayerTwo[2].moves[0]
+    atkFive.innerHTML = getPlayerTwo[2].moves[1]
+    atkSix.innerHTML = getPlayerTwo[2].moves[2]
     pokemonOnField2.src = getPlayerTwo[2].front
+    pokemonFour.disabled = true;
+    pokemonFive.disabled = true;
+    p6 = true;
   })
 }
 
