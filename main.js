@@ -372,20 +372,21 @@ if(startButton){
 */ 
 let pokemonOnField = document.querySelector('#trainerOneTeam');
 let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
-let fightButton = document.querySelector('#fightButton');
+let fightButton = document.querySelector('#fightButton')
 
 
-if(fightButton){
-  fightButton>addEventListener('click',()=>{
-    let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
+let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
     let getPlayerTwo = JSON.parse(localStorage.getItem('playerTwo'))
     console.log(getPlayerOne);
     console.log(getPlayerTwo);
-  })
-}
 
 
 
 
+if(fightButton){
+      fightButton.onclick = ()=>{
+        console.log('hi')
+      }
+    }
 
 
