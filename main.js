@@ -421,12 +421,16 @@ let atk3 = false;
 let atk4 = false;
 let atk5 = false;
 let atk6 = false;
-
+//creating an empty array becuase i might need it
+let battleArray = []
+let battleReady = false;
+let player1 = 3
+let player2 = 3
 //stored array in my local storage earlier so now im retrieving that information so that it can be applied to game
 let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
     let getPlayerTwo = JSON.parse(localStorage.getItem('playerTwo'))
-    console.log(getPlayerOne);
-     console.log(getPlayerTwo);
+    // console.log(getPlayerOne);
+    //  console.log(getPlayerTwo);
 
 
 
@@ -463,6 +467,9 @@ if(pokemonOne){
     pokemonTwo.disabled=true;
     pokemonThree.disabled = true;
     p1 = true;
+    battleArray.push(getPlayerOne[0])
+    console.log(battleArray)
+
   })
   
 }
@@ -477,6 +484,7 @@ if(pokemonTwo){
     pokemonOne.disabled = true;
     pokemonThree.disabled = true;
     p2 = true;
+    battleArray.push(getPlayerOne[1])
   })
 }
 
@@ -490,11 +498,12 @@ if(pokemonThree){
     pokemonOne.disabled = true;
     pokemonTwo.disabled = true;
     p3 = true;
+    battleArray.push(getPlayerOne[2]);
   })
 }
 
 if(pokemonFour){
-  pokemonOne2.addEventListener('click',()=>{
+  pokemonFour.addEventListener('click',()=>{
     console.log(getPlayerTwo[0].moves);
     atkFour.innerHTML = getPlayerTwo[0].moves[0]
     atkFive.innerHTML = getPlayerTwo[0].moves[1]
@@ -503,12 +512,14 @@ if(pokemonFour){
     pokemonFive.disabled=true;
     pokemonSix.disabled = true;
     p4 = true;
+    battleArray.push(getPlayerTwo[0])
+    console.log(battleArray)
 
   })
 }
 
 if(pokemonFive){
-  pokemonTwo2.addEventListener('click',()=>{
+  pokemonFive.addEventListener('click',()=>{
     console.log(getPlayerTwo[1].moves);
     atkFour.innerHTML = getPlayerTwo[1].moves[0]
     atkFive.innerHTML = getPlayerTwo[1].moves[1]
@@ -517,11 +528,12 @@ if(pokemonFive){
     pokemonFour.disabled = true;
     pokemonSix.disabled = true;
     p5= true;
+    battleArray.push(getPlayerTwo[1]);
   })
 }
 
 if(pokemonSix){
-  pokemonThree2.addEventListener('click',()=>{
+  pokemonSix.addEventListener('click',()=>{
     console.log(getPlayerTwo[2].moves);
     atkFour.innerHTML = getPlayerTwo[2].moves[0]
     atkFive.innerHTML = getPlayerTwo[2].moves[1]
@@ -530,6 +542,67 @@ if(pokemonSix){
     pokemonFour.disabled = true;
     pokemonFive.disabled = true;
     p6 = true;
+    battleArray.push(getPlayerTwo[2]);
   })
+}
+// click events for attacks 
+if(atkOne){
+  atkOne.addEventListener('click',()=>{
+    atk1=true;
+
+  })
+
+}
+if(atkTwo){
+  atkTwo.addEventListener('click',()=>{
+    atk2 = true;
+
+  })
+
+}
+if(atkThree){
+  atkThree.addEventListener('click',()=>{
+    atk3 = true;
+
+  })
+
+}
+if(atkFour){
+  atkFour.addEventListener('click',()=>{
+    atk4 = true;
+    if(p1 === true || p2 === true || p3 === true){
+      console.log(battleArray)
+      if(battleArray[0].attack - battleArray[1].defense < 0){
+          pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          console.log('pokemon 2 dead')
+          if(p4 === true){
+            pokemonFour.style.display = 'none';
+            alert('you got beat down player 2 try again')
+            player2 = player2 - 1;
+            if(player2 === 0){
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            }
+
+
+          }
+      }
+    }
+
+  })
+
+}
+if(atkFive){
+  atkFive.addEventListener('click',()=>{
+    atk5 = true;
+
+  })
+
+}
+if(atkSix){
+  atkSix.addEventListener('click',()=>{
+    atk6 = true;
+
+  })
+
 }
 
