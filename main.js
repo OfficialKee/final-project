@@ -375,8 +375,10 @@ let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
 let fightButton = document.querySelector('#fightButton');
 let addButtonsHere = document.querySelector('.alignButtonsOne');
 let addButtonsHereTwo = document.querySelector('.alignButtonsTwo');
+let addPokemon = document.querySelectorAll('.pokemon')
+let addPokemonTwo = document.querySelectorAll('.pokemonTwo')
 
-
+//stored array in my local storage earlier so now im retrieving that information so that it can be applied to game
 let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
     let getPlayerTwo = JSON.parse(localStorage.getItem('playerTwo'))
     console.log(getPlayerOne);
@@ -388,27 +390,21 @@ let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
 if(fightButton){
       fightButton.addEventListener('click',()=>{
         console.log('hi')
-
-        for (let i = 0; i < getPlayerOne.length; i++) {
-          let button = document.createElement('button');
-          button.classList.add('pokemon')
-          button.style.backgroundImage = `url('${getPlayerOne[i].img}')`
-          button.src = `${getPlayerOne[i].img}`
-          addButtonsHere.appendChild(button)
-          
-        }
-        for (let i = 0; i < getPlayerTwo.length; i++) {
-          let button = document.createElement('button');
-          button.classList.add('pokemon')
-          button.style.backgroundImage = `url('${getPlayerTwo[i].img}')`
-          button.src = `${getPlayerOne[i].img}`
-          addButtonsHereTwo.appendChild(button)
-          
-        }
-        fightButton.disabled = true
-      })
-}
+        //created loop to add   pokemon  to webpage upon click of fight button 
+        
+       for (let i = 0; i < 3; i++) {
+        addPokemon[i].style.backgroundImage = `url('${getPlayerOne[i].img}')`
+        
+       }
+       for (let i = 0; i < 3; i++) {
+        addPokemonTwo[i].style.backgroundImage = `url('${getPlayerTwo[i].img}')`
+        
+       }
+       fightButton.disabled = true;
+       alert('Populated below are the pokemon that you chose on the last page.  The pokemon have attacks specific to their type. Some pokemon are better against certain types. When a pokemon is knocked out , you will be prompted to choose another. The battle ends when either player doesnt have any pokemon that are able to continue. Last man Standing is the winner! ');
+        })
+        
+      }
 
 
 
-console.log(getPlayerOne[1].img)
