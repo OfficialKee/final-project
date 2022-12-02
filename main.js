@@ -150,7 +150,7 @@ if(squirtle){
        let name = data.name;
      //to loop through move list
 
-    let move1 = data.moves[0].move.name;
+    let move1 = data.moves[6].move.name;
     let move2 = data.moves[1].move.name;
     let move3 = data.moves[2].move.name;
     let img = data.sprites.front_shiny
@@ -205,7 +205,7 @@ if(pikachu){
      //to loop through move list
 
     let move1 = data.moves[0].move.name;
-    let move2 = data.moves[1].move.name;
+    let move2 = data.moves[3].move.name;
     let move3 = data.moves[2].move.name;
     let img = data.sprites.front_shiny
     //console.log(img)
@@ -259,7 +259,7 @@ if(pidgey){
        let name = data.name;
      //to loop through move list
 
-    let move1 = data.moves[0].move.name;
+    let move1 = data.moves[4].move.name;
     let move2 = data.moves[1].move.name;
     let move3 = data.moves[2].move.name;
     let img = data.sprites.front_shiny;
@@ -315,9 +315,9 @@ if(geodude){
        let name = data.name;
      //to loop through move list
 
-    let move1 = data.moves[0].move.name;
+    let move1 = data.moves[5].move.name;
     let move2 = data.moves[1].move.name;
-    let move3 = data.moves[2].move.name;
+    let move3 = data.moves[4].move.name;
     let img = data.sprites.front_shiny;
     //console.log(img)
     moves.push(move1);
@@ -409,7 +409,7 @@ let pokemonThree2 =document.querySelector('#pokemonTwoThree')
 let getPlayerOne = JSON.parse(localStorage.getItem('playerOne'))
     let getPlayerTwo = JSON.parse(localStorage.getItem('playerTwo'))
     console.log(getPlayerOne);
-    //  console.log(getPlayerTwo);
+     console.log(getPlayerTwo);
 
 
 
@@ -442,6 +442,7 @@ if(pokemonOne){
     atkOne.innerHTML = getPlayerOne[0].moves[0]
     atkTwo.innerHTML = getPlayerOne[0].moves[1]
     atkThree.innerHTML = getPlayerOne[0].moves[2]
+    pokemonOnField.src = getPlayerOne[0].back
   })
 }
 
@@ -451,6 +452,7 @@ if(pokemonTwo){
     atkOne.innerHTML = getPlayerOne[1].moves[0]
     atkTwo.innerHTML = getPlayerOne[1].moves[1]
     atkThree.innerHTML = getPlayerOne[1].moves[2]
+    pokemonOnField.src = getPlayerOne[1].back
   })
 }
 
@@ -460,6 +462,7 @@ if(pokemonThree){
     atkOne.innerHTML = getPlayerOne[2].moves[0]
     atkTwo.innerHTML = getPlayerOne[2].moves[1]
     atkThree.innerHTML = getPlayerOne[2].moves[2]
+    pokemonOnField.src = getPlayerOne[2].back
   })
 }
 
@@ -469,6 +472,7 @@ if(pokemonOne2){
     atkOne2.innerHTML = getPlayerTwo[0].moves[0]
     atkTwo2.innerHTML = getPlayerTwo[0].moves[1]
     atkThree2.innerHTML = getPlayerTwo[0].moves[2]
+    pokemonOnField2.src = getPlayerTwo[0].front
   })
 }
 
@@ -478,6 +482,7 @@ if(pokemonTwo2){
     atkOne2.innerHTML = getPlayerTwo[1].moves[0]
     atkTwo2.innerHTML = getPlayerTwo[1].moves[1]
     atkThree2.innerHTML = getPlayerTwo[1].moves[2]
+    pokemonOnField2.src = getPlayerTwo[1].front
   })
 }
 
@@ -487,6 +492,7 @@ if(pokemonThree2){
     atkOne2.innerHTML = getPlayerTwo[2].moves[0]
     atkTwo2.innerHTML = getPlayerTwo[2].moves[1]
     atkThree2.innerHTML = getPlayerTwo[2].moves[2]
+    pokemonOnField2.src = getPlayerTwo[2].front
   })
 }
 
