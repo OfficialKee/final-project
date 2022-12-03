@@ -554,6 +554,10 @@ if(atkOne){
     atkTwo.disabled = false;
     atkThree.disabled = false;
     atkOne.disabled = true;
+    atkOne.style.background = 'red'
+    atkTwo.style.background = ''
+    atkThree.style.background = ''
+    
 
   })
 
@@ -564,6 +568,9 @@ if(atkTwo){
     atkTwo.disabled = true
     atkThree.disabled = false;
     atkOne.disabled = false;
+    atkOne.style.background = ''
+    atkTwo.style.background = 'red'
+    atkThree.style.background = ''
 
   })
 
@@ -572,9 +579,12 @@ if(atkTwo){
 if(atkThree){
   atkThree.addEventListener('click',()=>{
     atk3 = true;
-    atkThree.disabled = true
-    atkOne.disabled = false
-    atkTwo.disabled = false
+    atkThree.disabled = true;
+    atkOne.disabled = false;
+    atkTwo.disabled = false;
+    atkOne.style.background = ''
+    atkTwo.style.background = ''
+    atkThree.style.background = 'red'
   })
 
 }
@@ -583,6 +593,9 @@ if(atkFour){
     atkFour.disabled = true;
     atkFive.disabled = false;
     atkSix.disabled = false;
+    atkFour.style.background = 'red'
+    atkFive.style.background = ''
+    atkSix.style.background = ''
     atk4 = true;
     if(p1 === true || p2 === true || p3 === true){
       console.log(battleArray)
@@ -626,6 +639,12 @@ if(atkFour){
       }else if(battleArray[0].attack - battleArray[1].defense < 0){
         pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
         console.log('pokemon one dead');
+        atkOne.style.background = ''
+        atkTwo.style.background = ''
+        atkThree.style.background = ''
+        atkTwo.disabled = false;
+         atkThree.disabled = false;
+        atkOne.disabled = false;
         if(p1 === true){
           pokemonTwo.disabled = false;
           pokemonThree.disabled = false;
@@ -634,7 +653,7 @@ if(atkFour){
           player1 = player1 - 1;
           p1 = false;
           if(player1 === 0){
-            alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
@@ -644,7 +663,7 @@ if(atkFour){
           player1 = player1 - 1;
           p2 = false;
           if(player1 === 0){
-            alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
           }
 
         }if(p3 === true){
@@ -655,7 +674,7 @@ if(atkFour){
           player1 = player1 - 1;
           p3 = false;
           if(player1 === 0){
-            alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
           }
 
         }
@@ -673,10 +692,13 @@ if(atkFive){
     atkFive.disabled = true;
     atkFour.disabled = false;
     atkSix.disabled = false;
+    atkFour.style.background = ''
+    atkFive.style.background = 'red'
+    atkSix.style.background = ''
     atk5 = true;
     if(p1 === true || p2 === true || p3 === true){
       console.log(battleArray)
-      if(battleArray[0].attack - battleArray[1].defense < 0){
+      if(battleArray[0].attack - battleArray[1].defense >0){
           pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
           console.log('pokemon 2 dead')
           if(p4 === true){
@@ -721,9 +743,15 @@ if(atkFive){
             }
 
           }
-      }else if(battleArray[0].attack - battleArray[1].defense > 0){
+      }else if(battleArray[0].attack - battleArray[1].defense < 0){
         pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
         console.log('pokemon one dead');
+        atkOne.style.background = ''
+        atkTwo.style.background = ''
+        atkThree.style.background = ''
+        atkTwo.disabled = false;
+         atkThree.disabled = false;
+        atkOne.disabled = false;
         if(p1 === true){
           pokemonTwo.disabled = false;
           pokemonThree.disabled = false;
@@ -781,6 +809,9 @@ if(atkSix){
     atk6.disabled = true;
     atk5.disabled = false;
     atk4.disabled = false;
+    atkFour.style.background = ''
+    atkFive.style.background = ''
+    atkSix.style.background = 'red'
     atk6 = true;
     if(p1 === true || p2 === true || p3 === true){
       console.log(battleArray)
@@ -837,6 +868,12 @@ if(atkSix){
       }else if(battleArray[0].attack - battleArray[1].defense > 0){
         pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
         console.log('pokemon one dead');
+        atkOne.style.background = ''
+        atkTwo.style.background = ''
+        atkThree.style.background = ''
+        atkTwo.disabled = false;
+         atkThree.disabled = false;
+        atkOne.disabled = false;
         if(p1 === true){
           pokemonTwo.disabled = false;
           pokemonThree.disabled = false;
