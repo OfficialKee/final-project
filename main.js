@@ -406,6 +406,7 @@ let pokemonThree =document.querySelector('#pokemonOneThree');
 let pokemonFour =document.querySelector('#pokemonTwoOne');
 let pokemonFive =document.querySelector('#pokemonTwoTwo');
 let pokemonSix =document.querySelector('#pokemonTwoThree');
+let announcement = document.querySelector('#announcement');
 //creating booleans to facilitate fight sequence...... false booleans for pokemon selection will be set to true once selected
 let pokemonChosen = false;
 let p1 = false;
@@ -606,33 +607,39 @@ if(atkFour){
             pokemonFive.disabled = false;
             pokemonSix.disabled = false;
             pokemonFour.style.display = 'none';
-            alert('you got beat down player 2 try again')
+            // alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             p4 = false;
             player2 = player2 - 1;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
 
             }
           }if(p5 === true){
             pokemonFour.disabled = false;
             pokemonSix.disabled = false;
             pokemonFive.style.display = 'none';
-            alert('you got beat down player 2 try again')
+            // alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             player2 = player2 - 1;
             p5 = false;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
             }
 
           }if(p6 === true){
             pokemonFour.disabled = false;
             pokemonFive.disabled = false;
             pokemonSix.style.display = 'none';
-            alert('you got beat down player 2 try again')
+            // alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             player2 = player2 - 1;
             p6 = false;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
             }
 
           }
@@ -649,32 +656,38 @@ if(atkFour){
           pokemonTwo.disabled = false;
           pokemonThree.disabled = false;
           pokemonOne.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player1 - 1;
           p1 = false;
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html '
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
           pokemonThree.disabled = false;
           pokemonTwo.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player1 - 1;
           p2 = false;
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html '
           }
 
         }if(p3 === true){
           pokemonOne.disabled = false;
           pokemonTwo.disabled = false;
           pokemonThree.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player1 - 1;
           p3 = false;
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html '
           }
 
         }
@@ -705,41 +718,48 @@ if(atkFive){
             pokemonFive.disabled = false;
             pokemonSix.disabled = false;
             pokemonFour.style.display = 'none';
-            alert('you got beat down player 2 try again')
+            // alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             player2 = player2 - 1;
             p4 = false;
             p1 = false;
             p2 = false;
             p3 = false;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
             }
+           
           }if(p5 === true){
             pokemonFour.disabled = false;
             pokemonSix.disabled = false;
             pokemonFive.style.display = 'none';
-            alert('you got beat down player 2 try again')
+            // alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             player2 = player2 - 1;
             p5 = false;
             p1 = false;
             p2 = false;
             p3 = false;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
             }
 
           }if(p6 === true){
             pokemonFour.disabled = false;
             pokemonFive.disabled = false;
             pokemonSix.style.display = 'none';
-            alert('you got beat down player 2 try again')
+            // alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             player2 = player2 - 1;
             p6 = false;
             p1 = false;
             p2 = false;
             p3 = false;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
             }
 
           }
@@ -756,41 +776,47 @@ if(atkFive){
           pokemonTwo.disabled = false;
           pokemonThree.disabled = false;
           pokemonOne.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player1 - 1;
           p1 = false;
           p4 =false;
           p5 =false;
           p6 =false;
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html '
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
           pokemonThree.disabled = false;
           pokemonTwo.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player1 - 1;
           p2 = false;
           p4 = false;
           p5 = false;
           p6 = false;
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html'
           }
 
         }if(p3 === true){
           pokemonOne.disabled = false;
           pokemonTwo.disabled = false;
           pokemonThree.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player1 - 1;
           p3 = false;
           p4 = false;
           p5 = false;
           p6 = false;
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html '
           }
 
         }
@@ -824,14 +850,16 @@ if(atkSix){
             pokemonFive.disabled = false;
             pokemonSix.disabled = false;
             pokemonFour.style.display = 'none';
-            alert('you got beat down player 2 try again')
+            // alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             player2 = player2 - 1;
             p4 = false;
             p1 = false;
             p2 = false;
             p3 = false;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
             }
           }if(p5 === true){
             
@@ -839,13 +867,15 @@ if(atkSix){
             pokemonSix.disabled = false;
             pokemonFive.style.display = 'none';
             alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             player2 = player2 - 1;
             p5 = false;
             p1 = false;
             p2 = false;
             p3 = false;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
             }
 
           }if(p6 === true){
@@ -854,14 +884,16 @@ if(atkSix){
             pokemonFour.disabled = false;
             pokemonFive.disabled = false;
             pokemonSix.style.display = 'none';
-            alert('you got beat down player 2 try again')
+            // alert('you got beat down player 2 try again')
+            announcement.innerHTML = 'player 2 you got spanked, get em next round!'
             player2 = player2 - 1;
             p6 = false;
             p1 = false;
             p2 = false;
             p3 = false;
             if(player2 === 0){
-              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+              alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
+              window.location = 'index.html '
             }
 
           }
@@ -878,20 +910,23 @@ if(atkSix){
           pokemonTwo.disabled = false;
           pokemonThree.disabled = false;
           pokemonOne.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player1 - 1;
           p1 = false;
           p4 = false;
           p5 = false;
           p6 = false;
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html '
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
           pokemonThree.disabled = false;
           pokemonTwo.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player1 - 1;
           p2 = false;
           p4 =false;
@@ -899,14 +934,16 @@ if(atkSix){
           p6 =false;
 
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html '
           }
 
         }if(p3 === true){
           pokemonOne.disabled = false;
           pokemonTwo.disabled = false;
           pokemonThree.style.display = 'none';
-          alert('you got beat down player 1 try again')
+          // alert('you got beat down player 1 try again')
+          announcement.innerHTML = 'player 1 you got spanked, get em next round!'
           player1 = player - 1;
           p3 = false;
           p4 = false;
@@ -914,7 +951,8 @@ if(atkSix){
           p6 = false;
           
           if(player1 === 0){
-            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play agin!')
+            alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
+            window.location = 'index.html '
           }
 
         }
