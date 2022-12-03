@@ -617,7 +617,8 @@ if(atkFour){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               //window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+              announcement.innerHTML = 'Bye Guys!!'
+              setTimeout(restartGame(),7000)
 
             }
           }if(p5 === true){
@@ -631,7 +632,8 @@ if(atkFour){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
              // window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+             announcement.innerHTML = 'Bye Guys!!'
+              setTimeout(restartGame(),7000)
             }
 
           }if(p6 === true){
@@ -645,7 +647,8 @@ if(atkFour){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+              announcement.innerHTML = 'Bye Guys!!'
+              setTimeout(restartGame(),7000)
             }
 
           }
@@ -669,7 +672,8 @@ if(atkFour){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
-            setTimeout( restartGame(),5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame(),7000)
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
@@ -682,7 +686,8 @@ if(atkFour){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
-            setTimeout( restartGame(),5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame(),7000)
           }
 
         }if(p3 === true){
@@ -696,7 +701,8 @@ if(atkFour){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
-            setTimeout( restartGame,5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame,7000)
           }
 
         }
@@ -737,7 +743,8 @@ if(atkFive){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+              announcement.innerHTML = 'Bye Guys!!'
+              setTimeout(restartGame(),7000)
             }
            
           }if(p5 === true){
@@ -754,7 +761,8 @@ if(atkFive){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+              announcement.innerHTML = 'Bye Guys!!'
+              setTimeout(restartGame(),7000)
             }
 
           }if(p6 === true){
@@ -771,7 +779,8 @@ if(atkFive){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+              announcement.innerHTML = 'Bye Guys!!'
+              setTimeout(restartGame(),7000)
             }
 
           }
@@ -798,7 +807,8 @@ if(atkFive){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
-            setTimeout( restartGame(),5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame(),7000)
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
@@ -813,7 +823,8 @@ if(atkFive){
           p6 = false;
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
-            setTimeout( restartGame(),5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame(),7000)
           }
 
         }if(p3 === true){
@@ -830,7 +841,8 @@ if(atkFive){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
-            setTimeout( restartGame(),5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame(),7000)
           }
 
         }
@@ -874,7 +886,8 @@ if(atkSix){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+              announcement.innerHTML = 'Bye Guys!!'
+              setTimeout(restartGame(),5000)
             }
           }if(p5 === true){
             
@@ -891,7 +904,8 @@ if(atkSix){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+              announcement.innerHTML = 'Bye Guys!!'
+              setTimeout( estartGame(),7000)
             }
 
           }if(p6 === true){
@@ -910,7 +924,8 @@ if(atkSix){
             if(player2 === 0){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
-              setTimeout( restartGame(),5000)
+              announcement.innerHTML = 'Bye Guys!!'
+              setTimeout(restartGame(),7000)
             }
 
           }
@@ -937,7 +952,8 @@ if(atkSix){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
-            setTimeout( restartGame(),5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame(),7000)
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
@@ -954,7 +970,8 @@ if(atkSix){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
-            setTimeout( restartGame(),5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame(),7000)
           }
 
         }if(p3 === true){
@@ -972,7 +989,8 @@ if(atkSix){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
-            setTimeout( restartGame(),5000)
+            announcement.innerHTML = 'Bye Guys!!'
+            setTimeout(restartGame(),7000)
           }
 
         }

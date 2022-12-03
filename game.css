@@ -11,18 +11,24 @@ header{
     display: flex;
     flex-direction: column;
    margin: auto;
+  
+   
 }
 #pokemonLogo{
   width: 75vh;
 }
 h1{
   margin: auto;
+  width: fit-content;
  
 }
 .players{
   justify-content: center;
   color: gray;
   font-size: 3vh;
+}
+.fightButton{
+  display: flex;
 }
 #fightButton{
   margin: auto;
@@ -34,6 +40,7 @@ h1{
   
 }
 .pokemon, .pokemonTwo{
+  justify-self: center;
   border-radius: 360px;
   width: 7vh;
   height: 7vh;
