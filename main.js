@@ -387,7 +387,20 @@ if(startButton){
 // pokemon shown on field
 let pokemonOnField = document.querySelector('#trainerOneTeam');
 let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
+//attack animation
 let attackBall = document.querySelector('#attackBall');
+//attack colors 
+ let leafAttack = 'https://th.bing.com/th/id/R.fb7f00e5d9f33c02df3c0ea6e95d8882?rik=8veNBJzHKsJb1g&riu=http%3a%2f%2fbestanimations.com%2fMilitary%2fExplosions%2fexplosion-animation-5.gif&ehk=r%2fNqV4a%2fh4%2faKUfBbMpN2tZ7tasklkuwdO6pCy71Vxs%3d&risl=&pid=ImgRaw&r=0';
+ let lightningAttack = 'https://www.animatedimages.org/data/media/41/animated-lightning-and-thunderbolt-image-0003.gif';
+ let windAttack = 'https://th.bing.com/th/id/R.fa1772d3e424fcf4dee0fb98097a4b51?rik=1BMJt0OH01KAGg&riu=http%3a%2f%2fthedogladysden.com%2fwp-content%2fuploads%2f2013%2f05%2fpuff-of-smoke.gif&ehk=eJ6zTUn35D%2bY4vKL5I5qjAi9XODmtLgnum2lqPIopjM%3d&risl=&pid=ImgRaw&r=0';
+ let fireAttack = 'https://i.gifer.com/origin/00/00ae53a95ee7af0be395f5291d792c9a.gif';
+ let waterAttack = 'https://img.itch.zone/aW1nLzQyNTM5MjUuZ2lm/347x500/5bpeWY.gif';
+ let rockAttack = 'https://cdn.forums.klei.com/monthly_2017_02/cavein_fall.gif.cd264d70f2bf74cce1037040dd5f5e9a.gif'
+ let emptyString = ''
+ //function to manipulate attack image
+ function changeAttack(attackType){
+  attackBall.src = `${attackType}`
+ }
 // trainer health bars
 let healthBarOne = document.querySelector('#healthOne');
 let healthBarTwo = document.querySelector('#HwalthTwo');
@@ -562,11 +575,32 @@ if(atkOne){
     atkOne.style.background = 'red'
     atkTwo.style.background = ''
     atkThree.style.background = ''
+    if(battleArray[0].name === 'bulbasaur'){
+      changeAttack(leafAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'charmander'){
+      changeAttack(fireAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'squirtle'){
+      changeAttack(waterAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'pidgey'){
+      changeAttack(windAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'geodude'){
+      changeAttack(rockAttack);
+      setTimeout(changeAttack,4000,emptyString);
+
+    }else if(battleArray[0].name === 'pikachu'){
+      changeAttack(lightningAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }
     
 
   })
 
 }
+
 if(atkTwo){
   atkTwo.addEventListener('click',()=>{
     atk2 = true;
@@ -576,6 +610,26 @@ if(atkTwo){
     atkOne.style.background = ''
     atkTwo.style.background = 'red'
     atkThree.style.background = ''
+    if(battleArray[0].name === 'bulbasaur'){
+      changeAttack(leafAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'charmander'){
+      changeAttack(fireAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'squirtle'){
+      changeAttack(waterAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'pidgey'){
+      changeAttack(windAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'geodude'){
+      changeAttack(rockAttack);
+      setTimeout(changeAttack,4000,emptyString);
+
+    }else if(battleArray[0].name === 'pikachu'){
+      changeAttack(lightningAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }
 
   })
 
@@ -590,11 +644,51 @@ if(atkThree){
     atkOne.style.background = ''
     atkTwo.style.background = ''
     atkThree.style.background = 'red'
+    if(battleArray[0].name === 'bulbasaur'){
+      changeAttack(leafAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'charmander'){
+      changeAttack(fireAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'squirtle'){
+      changeAttack(waterAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'pidgey'){
+      changeAttack(windAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[0].name === 'geodude'){
+      changeAttack(rockAttack);
+      setTimeout(changeAttack,4000,emptyString);
+
+    }else if(battleArray[0].name === 'pikachu'){
+      changeAttack(lightningAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }
   })
 
 }
 if(atkFour){
   atkFour.addEventListener('click',()=>{
+    if(battleArray[1].name === 'bulbasaur'){
+      changeAttack(leafAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'charmander'){
+      changeAttack(fireAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'squirtle'){
+      changeAttack(waterAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'pidgey'){
+      changeAttack(windAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'geodude'){
+      changeAttack(rockAttack);
+      setTimeout(changeAttack,4000,emptyString);
+
+    }else if(battleArray[1].name === 'pikachu'){
+      changeAttack(lightningAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }
     atkFour.disabled = true;
     atkFive.disabled = false;
     atkSix.disabled = false;
@@ -718,6 +812,26 @@ if(atkFour){
 if(atkFive){
   
   atkFive.addEventListener('click',()=>{
+    if(battleArray[1].name === 'bulbasaur'){
+      changeAttack(leafAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'charmander'){
+      changeAttack(fireAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'squirtle'){
+      changeAttack(waterAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'pidgey'){
+      changeAttack(windAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'geodude'){
+      changeAttack(rockAttack);
+      setTimeout(changeAttack,4000,emptyString);
+
+    }else if(battleArray[1].name === 'pikachu'){
+      changeAttack(lightningAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }
     atkFive.disabled = true;
     atkFour.disabled = false;
     atkSix.disabled = false;
@@ -859,6 +973,26 @@ if(atkFive){
 
 if(atkSix){
   atkSix.addEventListener('click',()=>{
+    if(battleArray[1].name === 'bulbasaur'){
+      changeAttack(leafAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'charmander'){
+      changeAttack(fireAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'squirtle'){
+      changeAttack(waterAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'pidgey'){
+      changeAttack(windAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }else if(battleArray[1].name === 'geodude'){
+      changeAttack(rockAttack);
+      setTimeout(changeAttack,4000,emptyString);
+
+    }else if(battleArray[1].name === 'pikachu'){
+      changeAttack(lightningAttack);
+      setTimeout(changeAttack,4000,emptyString);
+    }
     atk6.disabled = true;
     atk5.disabled = false;
     atk4.disabled = false;
@@ -906,7 +1040,7 @@ if(atkSix){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout( estartGame(),7000)
+              setTimeout(restartGame(),7000)
             }
 
           }if(p6 === true){
