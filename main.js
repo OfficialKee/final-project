@@ -387,6 +387,7 @@ if(startButton){
 // pokemon shown on field
 let pokemonOnField = document.querySelector('#trainerOneTeam');
 let pokemonOnField2 = document.querySelector('#trainerTwoTeam');
+let attackBall = document.querySelector('#attackBall');
 // trainer health bars
 let healthBarOne = document.querySelector('#healthOne');
 let healthBarTwo = document.querySelector('#HwalthTwo');

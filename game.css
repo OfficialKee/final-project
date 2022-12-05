@@ -84,6 +84,11 @@ main{
  
 
 }
+#fireBall{
+  width: 10vh;
+  margin-bottom: 7vh;
+
+}
 #trainerTwoTeam{
   width: 8vh;
   height: 6vh;
