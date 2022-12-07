@@ -401,6 +401,14 @@ let attackBall = document.querySelector('#attackBall');
  function changeAttack(attackType){
   attackBall.src = `${attackType}`
  }
+ let simpsonKiller = ()=>{
+  pokemonOnField.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+  
+ };
+ let iKilledKenny = ()=>{
+  pokemonOnField2.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g'
+ };
+ 
 // trainer health bars
 let healthBarOne = document.querySelector('#healthOne');
 let healthBarTwo = document.querySelector('#HwalthTwo');
@@ -667,7 +675,8 @@ if(atkThree){
   })
 
 }
-if(atkFour){
+
+if(atkFour){  `                                                                       `
   atkFour.addEventListener('click',()=>{
     if(battleArray[1].name === 'bulbasaur'){
       changeAttack(leafAttack);
@@ -699,7 +708,8 @@ if(atkFour){
     if(p1 === true || p2 === true || p3 === true){
       console.log(battleArray)
       if(battleArray[0].attack - battleArray[1].defense > 0){
-          pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          // pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          setTimeout(iKilledKenny,3000);
           console.log('pokemon 2 dead')
           if(p4 === true){
             pokemonFive.disabled = false;
@@ -713,7 +723,7 @@ if(atkFour){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               //window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),7000)
+              setTimeout(restartGame,7000)
 
             }
           }if(p5 === true){
@@ -728,7 +738,7 @@ if(atkFour){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
              // window.location = 'index.html '
              announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),7000)
+              setTimeout(restartGame,7000)
             }
 
           }if(p6 === true){
@@ -743,12 +753,13 @@ if(atkFour){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),7000)
+              setTimeout(restartGame,7000)
             }
 
           }
       }else if(battleArray[0].attack - battleArray[1].defense < 0){
-        pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        // pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        setTimeout(simpsonKiller,3000);
         console.log('pokemon one dead');
         atkOne.style.background = ''
         atkTwo.style.background = ''
@@ -768,7 +779,7 @@ if(atkFour){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
             announcement.innerHTML = 'Bye Guys!!'
-            setTimeout(restartGame(),7000)
+            setTimeout(restartGame,7000)
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
@@ -782,7 +793,7 @@ if(atkFour){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
             announcement.innerHTML = 'Bye Guys!!'
-            setTimeout(restartGame(),7000)
+            setTimeout(restartGame,7000)
           }
 
         }if(p3 === true){
@@ -842,7 +853,8 @@ if(atkFive){
     if(p1 === true || p2 === true || p3 === true){
       console.log(battleArray)
       if(battleArray[0].attack - battleArray[1].defense >0){
-          pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          // pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          setTimeout(iKilledKenny,3000);
           console.log('pokemon 2 dead')
           if(p4 === true){
             pokemonFive.disabled = false;
@@ -859,7 +871,7 @@ if(atkFive){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),7000)
+              setTimeout(restartGame,7000)
             }
            
           }if(p5 === true){
@@ -877,7 +889,7 @@ if(atkFive){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),7000)
+              setTimeout(restartGame,7000)
             }
 
           }if(p6 === true){
@@ -895,12 +907,13 @@ if(atkFive){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),7000)
+              setTimeout(restartGame,7000)
             }
 
           }
       }else if(battleArray[0].attack - battleArray[1].defense < 0){
-        pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        // pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        setTimeout(simpsonKiller,3000);
         console.log('pokemon one dead');
         atkOne.style.background = ''
         atkTwo.style.background = ''
@@ -923,7 +936,7 @@ if(atkFive){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
             announcement.innerHTML = 'Bye Guys!!'
-            setTimeout(restartGame(),7000)
+            setTimeout(restartGame,7000)
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
@@ -939,7 +952,7 @@ if(atkFive){
           if(player1 === 0){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             announcement.innerHTML = 'Bye Guys!!'
-            setTimeout(restartGame(),7000)
+            setTimeout(restartGame,7000)
           }
 
         }if(p3 === true){
@@ -957,7 +970,7 @@ if(atkFive){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
             announcement.innerHTML = 'Bye Guys!!'
-            setTimeout(restartGame(),7000)
+            setTimeout(restartGame,7000)
           }
 
         }
@@ -1003,7 +1016,8 @@ if(atkSix){
     if(p1 === true || p2 === true || p3 === true){
       console.log(battleArray)
       if(battleArray[0].attack - battleArray[1].defense < 0){
-          pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          // pokemonOnField2.src = 'https://media.tenor.com/images/8ac941c36812a99995c29fd8527222bb/tenor.gif'
+          setTimeout(iKilledKenny,3000);
           console.log('pokemon 2 dead')
           if(p4 === true){
            
@@ -1022,7 +1036,7 @@ if(atkSix){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),5000)
+              setTimeout(restartGame,7000)
             }
           }if(p5 === true){
             
@@ -1040,7 +1054,7 @@ if(atkSix){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),7000)
+              setTimeout(restartGame,7000)
             }
 
           }if(p6 === true){
@@ -1060,12 +1074,13 @@ if(atkSix){
               alert('Player 1 Winner Winner Chicken dinner. Go back to Home page to play again!')
               // window.location = 'index.html '
               announcement.innerHTML = 'Bye Guys!!'
-              setTimeout(restartGame(),7000)
+              setTimeout(restartGame,7000)
             }
 
           }
       }else if(battleArray[0].attack - battleArray[1].defense > 0){
-        pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        // pokemonOnField.src = 'https://media0.giphy.com/media/l0HlQrYmGIbYH1wYg/giphy.gif?cid=790b761144bd095685c155270e0307cffe0e6e4f28fcdbcf&rid=giphy.gif&ct=g';
+        setTimeout(simpsonKiller,3000);
         console.log('pokemon one dead');
         atkOne.style.background = ''
         atkTwo.style.background = ''
@@ -1088,7 +1103,7 @@ if(atkSix){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
             announcement.innerHTML = 'Bye Guys!!'
-            setTimeout(restartGame(),7000)
+            setTimeout(restartGame,7000)
           }
         }if(p2 === true){
           pokemonOne.disabled = false;
@@ -1106,7 +1121,7 @@ if(atkSix){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
             announcement.innerHTML = 'Bye Guys!!'
-            setTimeout(restartGame(),7000)
+            setTimeout(restartGame,7000)
           }
 
         }if(p3 === true){
@@ -1125,7 +1140,7 @@ if(atkSix){
             alert('Player 2 Winner Winner Chicken dinner. Go back to Home page to play again!')
             // window.location = 'index.html '
             announcement.innerHTML = 'Bye Guys!!'
-            setTimeout(restartGame(),7000)
+            setTimeout(restartGame,7000)
           }
 
         }
