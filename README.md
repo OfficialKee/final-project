@@ -1,46 +1,20 @@
-# Final Project
+#Bootleg Pokemon
+ 
+ *Utilizing the pokeApi , six starter pokemon have been accesed via  6 click events to store their data, in an array of objects that will be manipulated through out the game .
 
-In this project, you'll build a web application that does anything you want! 
+ * Users will load on page, pokemon theme song will begin to play
+ * Users will click RULES button and be instructed on how to begin game.
+ * Upon selection of pokemon users will click START button, and begin game.
 
-It must meet the project requirements below, but beyond that, feel free to use your creativity to decide on what your app will do.
 
-## Requirements
+ ##Part 2
 
-* **Your app has at least three distinct "features"**
-  * If you are building a travel planning application, one feature could be allowing users to create a new trip
-* Your project has at least ten commits in git
-* Your app is mobile responsive
-* Your project contains a `README.md` file that explains what your project is and how to use it
-* Your project is hosted on GitHub pages
-* Your code is clean
-  * Proper indentation
-  * No unnecessary repetition
-  * Variables as camelCase
+ * Users will click FIGHT button and chosen pokemon will populate. 
+ * Users must then in order choose pokemon  , which will then be added into a battleArray then choose attacks.
+ * Pokemon will attack each other as buttons are clicked, and winner will be determined based off of stats.
+ * Once a user runs out of pokemon a winner will be delcared and game will reset.
 
-## Project ideas
-
-* Travel planner
-* Budget manager
-* Resume builder
-* Shift scheduling app
-* Chat bot
-* Music making app
-* Games
-  * PacMan
-  * Chess
-* Do something with an external API: https://github.com/public-apis/public-apis
-  * Slack / discord bot
-  * Recreate Reddit
-  * Pokedex
-
-And so many more possibilities!
-
-## Recommendations
-
-* Start out by creating your project's foundation in HTML.
-* Frequently make commmits in git to save your progress.
-* Build one piece of Javascript functionality at a time, testing each change you make with `console.log`. 
-* Keep your code meticulously organized as you go. 
-* Use proper indentation, whitespace, and comments. 
-* Try to write a function for each separate piece of functionality that exists in your code. This will make your code "modular" and easier to build off of.
-* If you find yourself repeating code, think about how you could use either a loop or a new function to eliminate the repitition.
+ 
+ 
+###Credits
+ * -yours truly
